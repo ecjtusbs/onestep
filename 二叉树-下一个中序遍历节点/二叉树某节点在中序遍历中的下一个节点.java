@@ -3,7 +3,7 @@
  * @Date:   2018-09-30T13:07:07+08:00
  * @Email:  ecjtusbs@foxmail.com
  * @Last modified by:   chenhaisheng
- * @Last modified time: 2018-09-30T13:34:26+08:00
+ * @Last modified time: 2018-09-30T16:16:31+08:00
  * @Copyright: ecjtusbs@foxmail.com
  */
  题目描述
@@ -67,24 +67,20 @@ public class Solution {
          TreeLinkNode A=pNode;
 
         while(B.right==A){
-            A=B;
             if(B.next==null){
                 break;
             }
             B=B.next;
         }
-        //到了根节点,这时需要判断pnode是在左子树还是右子树
+     //到了根节点，如果当前节点在根节点右子树上，返回null
         if(B.next==null){
-            if(B.left==A){
             //到了根节点,当前节点在根节点左子树
-            return B;
-            }else if(B.right==A){
+            if(B.right==A){
                 return null;
             }
-        }else{
-            //没到根节点，返回找到的祖父节点
-            return B;
         }
-        return null;
+
+    //没到根节点，返回B；或到根节点且当前节点在根节点左子树上，也返回B
+            return B;
     }
 }
