@@ -3,13 +3,13 @@
  * @Date:   2018-09-30T17:22:35+08:00
  * @Email:  ecjtusbs@foxmail.com
  * @Last modified by:   chenhaisheng
- * @Last modified time: 2018-09-30T17:29:10+08:00
+ * @Last modified time: 2018-09-30T17:34:26+08:00
  * @Copyright: ecjtusbs@foxmail.com
  */
- 题目描述
- 从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。
+题目描述
+从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。
 
- 解析：维护两个队列，对应树的两层，交替入队列出队列
+解析：维护两个队列，对应树的两层，交替入队列出队列
 
 import java.util.ArrayList;
 import java.util.LinkedList;
